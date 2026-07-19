@@ -1,5 +1,4 @@
 # Data directories (populated from shared volume or curl export)
-data/
 output/slates/
 output/evaluation/
 
