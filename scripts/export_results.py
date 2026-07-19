@@ -29,7 +29,7 @@ from scripts.load_data import load_gold_table, build_user_item_matrix
 def load_srd_checkpoint(checkpoint_path: str):
     """Load an SRD model checkpoint and return the model and item vocabulary."""
     from scripts.train_srd import GRU4RecBackbone
-    ckpt = torch.load(checkpoint_path, map_location="cpu")
+    ckpt = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
     model = GRU4RecBackbone(vocab_size=ckpt["vocab_size"])
     model.load_state_dict(ckpt["state_dict"])
     model.eval()
