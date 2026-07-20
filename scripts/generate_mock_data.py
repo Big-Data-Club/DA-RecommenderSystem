@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 
-def generate_data(num_users=100, num_courses=3, num_nodes=20):
+def generate_data(num_users=100000, num_courses=3, num_nodes=20):
     np.random.seed(42)
     
     user_ids = np.arange(1, num_users + 1)
